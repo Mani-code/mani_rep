@@ -1,0 +1,19 @@
+apt-get update
+apt-get upgrade
+apt install openjdk-8-jdk
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+apt-get update
+apt install jenkins
+systemctl status jenkins
+
+
+wget --no-check-certificate -qO - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+
+
+sudo apt-get remove --purge jenkins
+
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+e8ef467b0b984f7ca0cb373799f937e6
